@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "JAPokemon.h"
 
 @interface ViewController ()
 
@@ -14,14 +15,65 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+//    [JAPokemon fetchPokemons:^(NSDictionary *pokemons, NSError *error) {
+//        if (!error) {
+//            NSLog(@"%@", [pokemons class]);
+//            NSLog(@"%@", pokemons);
+//        }
+//    }];
+//    
+//    [JAPokemon fetchPokemonWithName:@"bulbasaur" WithBlock:^(NSDictionary *pokemon, NSError *error) {
+//        if (!error) {
+//            NSLog(@"%@", [pokemon class]);
+//            NSLog(@"%@", pokemon);
+//        }
+//    }];
+    
+//    [JAPokemon fetchBerries:^(NSDictionary *berries, NSError *error) {
+//        if (!error) {
+//            NSLog(@"%@", [berries class]);
+//            NSLog(@"%@", berries);
+//        }
+//    }];
+//    
+//    [JAPokemon fetchBerryWithName:@"cheri" WithBlock:^(NSDictionary *berry, NSError *error) {
+//        if (!error) {
+//            NSLog(@"%@", [berry class]);
+//            NSLog(@"%@", berry);
+//        }
+//    }];
+    
+//    [JAPokemon fetchBerriesFirmness:^(NSDictionary *berriesFirmness, NSError *error) {
+//        if (!error) {
+//            NSLog(@"%@", [berriesFirmness class]);
+//            NSLog(@"%@", berriesFirmness);
+//        }
+//    }];
+//    
+//    [JAPokemon fetchBerryFirmnessWithName:@"soft" WithBlock:^(NSDictionary *berryFirmness, NSError *error) {
+//        if (!error) {
+//            NSLog(@"%@", [berryFirmness class]);
+//            NSLog(@"%@", berryFirmness);
+//        }
+//    }];
+    
+//    [JAPokemon fetchBerriesFlavor:^(NSDictionary *berriesFlavor, NSError *error) {
+//        if (!error) {
+//            NSLog(@"%@", [berriesFlavor class]);
+//            NSLog(@"%@", berriesFlavor);
+//        }
+//    }];
+//    
+//    [JAPokemon fetchBerryFlavorWithName:@"spicy" WithBlock:^(NSDictionary *berryFlavor, NSError *error) {
+//        if (!error) {
+//            NSLog(@"%@", [berryFlavor class]);
+//            NSLog(@"%@", berryFlavor);
+//        }
+//    }];
 }
 
 @end
