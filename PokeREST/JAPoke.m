@@ -6,29 +6,32 @@
 //  Copyright © 2016 Jose Antonio Gonzalez. All rights reserved.
 //
 
-#import "JAPokemon.h"
+#import "JAPoke.h"
 
 NSString * const BASE_URL = @"http://pokeapi.co/api/v2";
 NSString * const kBerryResource = @"berry";
 NSString * const kBerryFirmnessResource = @"berry-firmness";
 NSString * const kBerryFlavorResource = @"berry-flavor";
+NSString * const kContestTypeResource = @"contest-type";
+NSString * const kContestEffectResource = @"contest-effect";
+NSString * const kSuperContestEffectResource = @"super-contest-effect";
 NSString * const kPokemonResource = @"pokemon";
 
-@implementation JAPokemon
+@implementation JAPoke
 
-#pragma mark - Berry
+#pragma mark - Berries
 
 + (void)fetchBerries:(void(^)(NSDictionary *berries, NSError *error))block
 {
     [self fetch:kBerryResource
-      WithBlock:^(id berries, NSError *error)
-    {
-        if (error) {
-            block(nil, error);
-        } else {
-            block(berries, nil);
-        }
-    }];
+           WithBlock:^(id berries, NSError *error)
+     {
+         if (error) {
+             block(nil, error);
+         } else {
+             block(berries, nil);
+         }
+     }];
 }
 
 + (void)fetchBerryWithID:(NSString *)berryID
@@ -47,7 +50,7 @@ NSString * const kPokemonResource = @"pokemon";
 }
 
 + (void)fetchBerryWithName:(NSString *)berryName
-               WithBlock:(void(^)(NSDictionary *berry, NSError *error))block
+                 WithBlock:(void(^)(NSDictionary *berry, NSError *error))block
 {
     [self fetch:kBerryResource
    WithIdOrName:berryName
@@ -60,6 +63,8 @@ NSString * const kPokemonResource = @"pokemon";
          }
      }];
 }
+
+#pragma mark - Berries Firmness
 
 + (void)fetchBerriesFirmness:(void(^)(NSDictionary *berriesFirmness, NSError *error))block
 {
@@ -104,6 +109,8 @@ NSString * const kPokemonResource = @"pokemon";
      }];
 }
 
+#pragma mark - Berries Flavor
+
 + (void)fetchBerriesFlavor:(void(^)(NSDictionary *berriesFlavor, NSError *error))block
 {
     [self fetch:kBerryFlavorResource
@@ -143,6 +150,114 @@ NSString * const kPokemonResource = @"pokemon";
              block(nil, error);
          } else {
              block(berryFlavor, nil);
+         }
+     }];
+}
+
+
+#pragma mark - Contest Types
+
++ (void)fetchContestTypes:(void(^)(NSDictionary *contestTypes, NSError *error))block
+{
+    [self fetch:kContestTypeResource
+      WithBlock:^(id contestTypes, NSError *error)
+     {
+         if (error) {
+             block(nil, error);
+         } else {
+             block(contestTypes, nil);
+         }
+     }];
+}
+
++ (void)fetchContestTypeWithID:(NSString *)contestTypeID
+                     WithBlock:(void(^)(NSDictionary *contestType, NSError *error))block
+{
+    [self fetch:kContestTypeResource
+   WithIdOrName:contestTypeID
+          Block:^(id contestType, NSError *error)
+     {
+         if (error) {
+             block(nil, error);
+         } else {
+             block(contestType, nil);
+         }
+     }];
+}
+
++ (void)fetchContestTypeWithName:(NSString *)contestTypeName
+                       WithBlock:(void(^)(NSDictionary *contestType, NSError *error))block
+{
+    [self fetch:kContestTypeResource
+   WithIdOrName:contestTypeName
+          Block:^(id contestType, NSError *error)
+     {
+         if (error) {
+             block(nil, error);
+         } else {
+             block(contestType, nil);
+         }
+     }];
+}
+
+
+#pragma mark - Contest Effects
+
++ (void)fetchContestEffects:(void(^)(NSDictionary *contestEffects, NSError *error))block
+{
+    [self fetch:kContestEffectResource
+      WithBlock:^(id contestEffects, NSError *error)
+     {
+         if (error) {
+             block(nil, error);
+         } else {
+             block(contestEffects, nil);
+         }
+     }];
+}
+
++ (void)fetchContestEffectWithID:(NSString *)contestEffectID
+                       WithBlock:(void(^)(NSDictionary *contestEffect, NSError *error))block
+{
+    [self fetch:kContestEffectResource
+   WithIdOrName:contestEffectID
+          Block:^(id contestEffect, NSError *error)
+     {
+         if (error) {
+             block(nil, error);
+         } else {
+             block(contestEffect, nil);
+         }
+     }];
+}
+
+
+#pragma mark - Super Contest Effects
+
++ (void)fetchSuperContestEffects:(void(^)(NSDictionary *superContestEffects, NSError *error))block
+{
+    [self fetch:kSuperContestEffectResource
+      WithBlock:^(id superContestEffects, NSError *error)
+     {
+         if (error) {
+             block(nil, error);
+         } else {
+             block(superContestEffects, nil);
+         }
+     }];
+}
+
++ (void)fetchSuperContestEffectWithID:(NSString *)supperContestEffectID
+                            WithBlock:(void(^)(NSDictionary *supperContestEffect, NSError *error))block
+{
+    [self fetch:kSuperContestEffectResource
+   WithIdOrName:supperContestEffectID
+          Block:^(id supperContestEffect, NSError *error)
+     {
+         if (error) {
+             block(nil, error);
+         } else {
+             block(supperContestEffect, nil);
          }
      }];
 }

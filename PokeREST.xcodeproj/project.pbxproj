@@ -14,7 +14,7 @@
 		BD2EBCC01CD511BC009F4DE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2EBCBE1CD511BC009F4DE2 /* Main.storyboard */; };
 		BD2EBCC21CD511BC009F4DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD2EBCC11CD511BC009F4DE2 /* Assets.xcassets */; };
 		BD2EBCC51CD511BC009F4DE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2EBCC31CD511BC009F4DE2 /* LaunchScreen.storyboard */; };
-		BDA1AFF11CD513F8005E6F7E /* JAPokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA1AFF01CD513F8005E6F7E /* JAPokemon.m */; };
+		BDA1AFF11CD513F8005E6F7E /* JAPoke.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA1AFF01CD513F8005E6F7E /* JAPoke.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		BD2EBCC11CD511BC009F4DE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD2EBCC41CD511BC009F4DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD2EBCC61CD511BC009F4DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BDA1AFEF1CD513F8005E6F7E /* JAPokemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAPokemon.h; sourceTree = "<group>"; };
-		BDA1AFF01CD513F8005E6F7E /* JAPokemon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAPokemon.m; sourceTree = "<group>"; };
+		BDA1AFEF1CD513F8005E6F7E /* JAPoke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAPoke.h; sourceTree = "<group>"; };
+		BDA1AFF01CD513F8005E6F7E /* JAPoke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAPoke.m; sourceTree = "<group>"; };
 		D4C3F2796ADFE8F322515E99 /* Pods-PokeREST.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeREST.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeREST/Pods-PokeREST.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,8 +85,8 @@
 		BD2EBCB41CD511BC009F4DE2 /* PokeREST */ = {
 			isa = PBXGroup;
 			children = (
-				BDA1AFEF1CD513F8005E6F7E /* JAPokemon.h */,
-				BDA1AFF01CD513F8005E6F7E /* JAPokemon.m */,
+				BDA1AFEF1CD513F8005E6F7E /* JAPoke.h */,
+				BDA1AFF01CD513F8005E6F7E /* JAPoke.m */,
 				BD2EBCBB1CD511BC009F4DE2 /* ViewController.h */,
 				BD2EBCBC1CD511BC009F4DE2 /* ViewController.m */,
 				BD2EBCBE1CD511BC009F4DE2 /* Main.storyboard */,
@@ -231,7 +231,7 @@
 			files = (
 				BD2EBCBD1CD511BC009F4DE2 /* ViewController.m in Sources */,
 				BD2EBCBA1CD511BC009F4DE2 /* AppDelegate.m in Sources */,
-				BDA1AFF11CD513F8005E6F7E /* JAPokemon.m in Sources */,
+				BDA1AFF11CD513F8005E6F7E /* JAPoke.m in Sources */,
 				BD2EBCB71CD511BC009F4DE2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
